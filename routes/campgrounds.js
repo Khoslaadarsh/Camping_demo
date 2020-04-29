@@ -6,15 +6,14 @@ var middleWare = require('../middleware/index');
 
 // INDEX ROUTE - show all campgrounds
 router.get('/', (req, res)=>{
-    res.send('HELLO THERE');
-    // Campground.find({},(err, allCampgrounds)=>{
-    //     if(err){
-    //         console.log(err);
-    //     }
-    //     else{
-    //         res.render('campgrounds/index', {campgrounds: allCampgrounds, currentUser: req.user});
-    //     }
-    // })
+    Campground.find({},(err, allCampgrounds)=>{
+        // if(err){
+        //     console.log(err);
+        // }
+        // else{
+            res.send('HELLO EVERY ONE');
+        // }
+    })
 })
 
 
