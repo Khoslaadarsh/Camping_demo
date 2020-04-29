@@ -22,7 +22,7 @@ var commentRoutes           = require('./routes/comments'),
      
 
     // mongoose.connect("mongodb://localhost:27017/Yelp_Camp02_dynamicPricing", {useNewUrlParser:true, useUnifiedTopology:true})
-    mongoose.connect("mongodb+srv://adarsh:kumar@cluster0-oo8gl.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser:true, useUnifiedTopology:true})
+    mongoose.connect("mongodb+srv://adarsh:kumar@cluster0-oo8gl.mongodb.net/test?retryWrites=true", {useNewUrlParser:true, useUnifiedTopology:true})
     app.use(bodyParser.urlencoded({extended: true}))
     app.set('view engine', 'ejs');
     app.use(express.static(__dirname + '/public'))
