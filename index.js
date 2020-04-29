@@ -17,7 +17,7 @@ var commentRoutes           = require('./routes/comments'),
     campgroundRoutes        = require('./routes/campgrounds'),
     indexRoutes             = require('./routes/index');
 
-
+    const PORT = process.env.PORT || 49966;
     // seedsDB(); //seed the database
      
 
@@ -53,6 +53,4 @@ app.use('/campgrounds',campgroundRoutes);
 app.use('/campgrounds/:id/comments',commentRoutes);
 
 //  PORT LISTNING
-app.listen('3000', ()=>{
-    console.log('Server has started');
-})
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
